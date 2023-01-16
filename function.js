@@ -74,7 +74,7 @@ window.function = function (seq,userID,bearer) {
     var elapsedTime=0;
     var timeoutId=null;
     var testVal = 75;
-    const url ='https://script.google.com/macros/s/AKfycbxHw4nCgxkefuEOD04d5J-MzBB3I6sBL38kyWOcUnkJuQjSXuJ_NkNEKlBO5ZyKIaVZ/exec';
+    const url ='https://script.google.com/macros/s/AKfycbzxnSJQllQmfv9RpeZNfrAeVOmSY-097ZfTP1-JqQZ77X9fMirSHyh-hJ_0suGY6kSY/exec';
     const userData = {
             userID: user,
             time: elapsedTime
