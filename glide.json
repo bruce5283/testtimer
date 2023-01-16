@@ -1,0 +1,21 @@
+{
+  "kind": "column",
+  "name": "Customized interaction chart",
+  "description":"",
+  "author":"https://www.w3schools.com/",
+  "params": [
+    {
+    	"name":"time",
+    	"displayName":"Time",
+    	"type": "number"
+    },
+    {
+    	"name": "seq",
+    	"displayName": "Sequence",
+    	"type": "number"
+    }
+  ],
+  "result":{
+  	"type": "uri"
+  }
+ }
