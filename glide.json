@@ -1,3 +1,4 @@
+[
 {
   "kind": "column",
   "name": "Customized interaction chart",
@@ -5,17 +6,23 @@
   "author":"https://www.w3schools.com/",
   "params": [
     {
-    	"name":"time",
-    	"displayName":"Time",
+    	"name":"seq",
+    	"displayName":"Sequence",
     	"type": "number"
     },
     {
-    	"name": "seq",
-    	"displayName": "Sequence",
-    	"type": "number"
+    	"name":"userID",
+    	"displayName": "User",
+    	"type": "string"
+    },
+    {
+        "name":"bearer",
+        "displayName":"Bearer ID",
+        "type":"string"
     }
   ],
   "result":{
   	"type": "uri"
   }
  }
+]
