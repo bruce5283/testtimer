@@ -75,10 +75,22 @@ window.function = function (seq,userID,bearer) {
     var timeoutId=null;
     var testVal = 75;
     const url ='https://script.google.com/macros/s/AKfycbxHw4nCgxkefuEOD04d5J-MzBB3I6sBL38kyWOcUnkJuQjSXuJ_NkNEKlBO5ZyKIaVZ/exec';
-    const user = {
+    const userData = {
             userID: user,
             time: elapsedTime
         };
+    const asyncPostCall = async () => {
+        try {
+            const response = await fetch(url,{
+                "method": "POST",
+                "Content-Type": "application/json",
+                "body": JSON.stringify(userData)
+            });
+            const data = await response.text();
+        }catch(error){
+            
+        }
+    }
 
  
     //method to operate start and stop function
@@ -91,6 +103,7 @@ window.function = function (seq,userID,bearer) {
         elapsedTime += Date.now() - startTime;
         clearTimeout(timeoutId);
         mainButton.innerHTML = 'Start';
+        asyncPostCall();
       }
     }
  
