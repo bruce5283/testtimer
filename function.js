@@ -140,7 +140,7 @@ window.function = function (seq,userID,bearer) {
             const response = await fetch(url,{
                 "method": "POST",
                 "Content-Type": "application/json",
-                "body": JSON.stringify(user)
+                "body": JSON.stringify(userData)
             });
             const data = await response.text();
         }catch(error){
