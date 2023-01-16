@@ -87,6 +87,8 @@ window.function = function (seq,userID,bearer) {
                 "body": JSON.stringify(user)
             });
             const data = await response.text();
+        }catch(error){
+            
         }
     }
  
