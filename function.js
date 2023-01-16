@@ -134,6 +134,20 @@ window.function = function (seq,userID,bearer) {
         stopwatch.innerHTML = hour+':'+minutes+':'+seconds+':'+milliseconds;
     }
     
+    //async post
+    const asyncPostCall = async () => {
+        try {
+            const response = await fetch(url,{
+                "method": "POST",
+                "Content-Type": "application/json",
+                "body": JSON.stringify(user)
+            });
+            const data = await response.text();
+        }catch(error){
+            
+        }
+    }
+    
 
 
     </script>
