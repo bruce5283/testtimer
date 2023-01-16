@@ -79,19 +79,6 @@ window.function = function (seq,userID,bearer) {
             userID: user,
             time: elapsedTime
         };
-    const asyncPostCall = async () => {
-        try {
-            const response = await fetch(url,{
-                "method": "POST",
-                "Content-Type": "application/json",
-                "body": JSON.stringify(userData)
-            });
-            const data = await response.text();
-        }catch(error){
-            
-        }
-    }
-
  
     //method to operate start and stop function
     function main(){
@@ -103,7 +90,6 @@ window.function = function (seq,userID,bearer) {
         elapsedTime += Date.now() - startTime;
         clearTimeout(timeoutId);
         mainButton.innerHTML = 'Start';
-        asyncPostCall();
       }
     }
  
