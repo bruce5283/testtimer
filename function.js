@@ -75,10 +75,22 @@ window.function = function (seq,userID,bearer) {
     var timeoutId=null;
     var testVal = 75;
     const url ='https://script.google.com/macros/s/AKfycbxHw4nCgxkefuEOD04d5J-MzBB3I6sBL38kyWOcUnkJuQjSXuJ_NkNEKlBO5ZyKIaVZ/exec';
-    const data = {
-            "userID": user,
-            "time":testVal
+    const user = {
+            userID: user,
+            time: elapsedTime
         };
+    const asyncPostCall = async () => {
+        try {
+            const response = await fetch(url,{
+                "method": "POST",
+                "Content-Type": "application/json",
+                "body": JSON.stringify(user)
+            });
+            const data = await response.text();
+        } catch(error){
+            
+        }
+    }
  
     //method to operate start and stop function
     function main(){
@@ -90,14 +102,7 @@ window.function = function (seq,userID,bearer) {
         elapsedTime += Date.now() - startTime;
         clearTimeout(timeoutId);
         mainButton.innerHTML = 'Start';
-        fetch(url,{
-            method:'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
-        .then(response => response.json())
+        asyncPostCall()
       }
     }
  
